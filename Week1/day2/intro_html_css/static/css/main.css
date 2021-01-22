@@ -1,0 +1,22 @@
+
+.borderbox {
+    border-style: solid;
+    padding: 10%;
+    border-width: 1px;
+    margin-top: 10%;
+    
+}
+.Account_button {
+    margin-top: 5%;
+}
+
+.row {
+    width: 120%;
+    
+}
+
+.bottom_text {
+    text-align: center;
+    margin-right: 3%;
+}
+
