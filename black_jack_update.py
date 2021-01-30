@@ -2,13 +2,7 @@ from IPython.display import clear_output as co
 import random
 
 #CLASSES
-
-class Game:
-    def __init__(self):
-        pass
-
-    def play(self):
-        playing = True
+playing = True
 
 # Class for card
 class Card:
@@ -40,8 +34,8 @@ class Deck:
 
 #picking a card from deck
     def deal(self)
-    one_card = self.deck.pop()
-    return one_card
+        one_card = self.deck.pop()
+        return one_card
 
 class Hand: 
     
@@ -50,13 +44,13 @@ class Hand:
         self.value = 0
         self.aces = 0
         
-     def add_card(self, card):
+    def add_card(self, card):
         self.cards.append(card)
         self.values += values[card.rank]
         if card.rank == 'ace':
             self.aces += 1
             
-      def adjust_for_ace(self)
+    def adjust_for_ace(self)
         while self.value > 21 and self.aces:
             self.value -= 10
             self.aces -= 1
