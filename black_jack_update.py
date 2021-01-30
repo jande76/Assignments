@@ -27,12 +27,21 @@ class Deck:
             for rank in ranks:
                 self.deck.append(Card(suit, rank))
 
+#Turns deck obj into strings
+    def __str__(self):
+        deck_cons = '' 
+        for card in self.decks:
+            deck_cons += '\n' card.__str__()
+        return deck_cons 
+
 #Randomizes the order of the deck list
     def shuffle(self)  
         random.shuffle(self.deck)
 
-    # deal function   
-    # def deal(self):
+#picking a card from deck
+    def deal(self)
+    one_card = self.deck.pop()
+    return one_card
 
 class Hand: 
     
