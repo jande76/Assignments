@@ -108,13 +108,25 @@ value = {'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eigh
 #FUNCTIONS
    
 #hit or stand
-def hit_stand()
-    pass
+class Hit_Or_Stand:
+    
+    def hit(deck, hand):
+        hand.add_card(deck.deal())
+        hand.adjust_for_ace()
 
-def 
+    def hit_and_stand(deck, hand):
 
-(can someone invite me to the zoom?)
+        while True:
+            ask = input("Are you going to hit or stand? Enter 'hit' or 'stand.' ")
 
-
+            if ask[0].lower() == 'hit':
+                hit(deck, hand)
+            elif ask[0].lower() == 'stand':
+                print("You are choosing to stand. It's the dealer's turn.")
+                playing = False
+            else:
+                print("Plase seelect a valid command, 'hit or 'stand'")
+                continue
+            break
 
     while not game_Over:
