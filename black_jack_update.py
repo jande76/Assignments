@@ -13,9 +13,11 @@ class Game:
 # Class for card
 class Card:
     def __init__(self, suit, rank):    
-       self.suit = suit,
+       self.suit = suit
        self.rank = rank
-    def __repr__(self): 
+        
+    def __str__(self):
+        return self.rank + ' of ' + self.suit
 
 # Class for the deck
 class Deck:
@@ -32,7 +34,26 @@ class Deck:
     # deal function   
     # def deal(self):
 
-#Class for Dealer
+class Hand: 
+    
+    def __init__(self):
+        self.cards = []
+        self.value = 0
+        self.aces = 0
+        
+     def add_card(self, card):
+        self.cards.append(card)
+        self.values += values[card.rank]
+        if card.rank == 'ace':
+            self.aces += 1
+            
+      def adjust_for_ace(self)
+        while self.value > 21 and self.aces:
+            self.value -= 10
+            self.aces -= 1
+        
+    
+ #Class for Dealer
 
 
 class Dealer:
